@@ -18,7 +18,7 @@ import { ref } from 'vue'
 import TextInput from './TextInput.vue'
 import MessageArea from './MessageArea.vue'
 
-const socket = new WebSocket('ws://lxsr.net');
+const socket = new WebSocket('wss://lxsr.net');
 
 const messages = ref([])
 

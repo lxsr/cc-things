@@ -14,6 +14,4 @@ wss.on('connection', (ws) => {
       }
     });
   })
-
-  ws.send('test');
 });
