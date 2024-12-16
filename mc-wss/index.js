@@ -15,3 +15,13 @@ wss.on('connection', (ws) => {
     });
   })
 });
+
+const interval = setInterval(() => {
+  wss.clients.forEach((ws) => {
+    ws.ping();
+  });
+}, 30000);
+
+wss.on('close', () => {
+  clearInterval(interval);
+})
