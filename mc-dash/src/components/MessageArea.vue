@@ -9,50 +9,22 @@
     text-lg
   "
   >
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
-    <div>Hello1</div>
-    <div>Hello2</div>
-    <div>Hello3</div>
+    <div class="flex flex-col">
+      <div 
+        v-for="(message, index) in messages"
+        :key="index"
+      >
+        {{ message }}
+      </div>
+    </div>
   </div>
 </template>
+
+<script setup>
+const { messages } = defineProps({
+  messages: {
+    type: Array,
+    required: true
+  }
+})
+</script>
